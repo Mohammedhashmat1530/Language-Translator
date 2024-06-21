@@ -95,17 +95,13 @@
               </button>
             </div>
         
-            <ul id="dropdownMenu" class="hidden absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+            <ul id="dropdownMenu" class="hidden absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white  overflow-y-scroll max-h-52 z-30">
+              <% languages.forEach(function(lang) { %>
               <li class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                Account settings
+                <%= lang %>
               </li>
-              <li class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-               Support
-              </li>
-              <li class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                License
-              </li>
-              
+             
+              <% }); %>
             </ul>
           </div>
         </div>
