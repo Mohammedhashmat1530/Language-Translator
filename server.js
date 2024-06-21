@@ -14,7 +14,7 @@ const options = {
     'x-rapidapi-key': 'b711e39f90mshf401fdca63ac09bp1ed65bjsnef4e72115952',
     'x-rapidapi-host': 'google-translator9.p.rapidapi.com'
   }
-};
+}
 
     let languages = [];
     const fetchLanguages = async () => {
