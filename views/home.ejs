@@ -19,9 +19,6 @@
   </head>
   <body class="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white" >
 
-      <div>
-        <h3>Language - Translator</h3>
-      </div>
 
     <div class="min-h-screen flex items-center justify-center ">
     <div class="fixed bottom-5 right-5 z-10">
@@ -51,7 +48,7 @@
           </div>
         </div>
         <div class="relative mb-4">
-          <textarea id="input-text" class="w-full p-4 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg resize-none outline-none text-lg placeholder-gray-400 dark:placeholder-gray-500" cols="30" rows="10" placeholder="Enter your text here"></textarea>
+          <textarea   id="input-text" class="w-full p-4 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg resize-none outline-none text-lg placeholder-gray-400 dark:placeholder-gray-500" cols="30" rows="10" placeholder="Enter your text here"></textarea>
           <div class="absolute bottom-2 right-2 text-sm text-gray-600 dark:text-gray-400"><span id="input-chars">0</span> / 5000</div>
         </div>
         
@@ -102,4 +99,20 @@
     <script src="script/languages.js"></script>
     <script src="script/script.js"></script>
   </body>
+  <script>
+    const inputTextElem = document.querySelector("#input-text");
+    const inputChars = document.querySelector("#input-chars");
+
+   inputTextElem.addEventListener("input", (e) => {
+  //limit input to 5000 characters
+
+  inputChars.innerHTML = inputTextElem.value.length;
+  if (inputTextElem.value.length >= 5000) {
+    inputTextElem.value = inputTextElem.value.slice(0, 5000);
+    inputChars.innerHTML = 5000
+  }
+  // inputCharsElem.value=inputTextElem.value ? 0 : inputCharsElem.value
+  console.log(  inputChars.innerHTML)
+});
+  </script>
 </html>
