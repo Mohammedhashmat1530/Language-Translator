@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/c151b27f34.js" crossorigin="anonymous"></script>
   </head>
   <body class="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white" >
-
+  =
 
     <div class="min-h-screen flex items-center justify-center ">
     <div class="fixed bottom-5 right-5 z-10">
@@ -41,9 +41,12 @@
               <span class="flex-1 ml-2">Auto Detect</span>
               <ion-icon name="chevron-down-outline" class="text-xl transform transition-transform"></ion-icon>
             </div>
-            <ul class="dropdown-menu absolute left-0 top-full mt-1 w-full bg-white dark:bg-gray-700 rounded-lg shadow-lg hidden">
-              <li class="p-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600">DropDown Menu Item 1</li>
-              <li class="p-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600">DropDown Menu Item 2</li>
+            <ul class="dropdown-menu absolute left-0 mt-1 w-full bg-white rounded-lg shadow-lg overflow-y-auto z-10 max-h-52">
+              <% languages.forEach(function(lang) { %>
+              <li class="p-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-600"><%= lang %> </li>
+           
+              <% }); %>
+            
             </ul>
           </div>
         </div>
