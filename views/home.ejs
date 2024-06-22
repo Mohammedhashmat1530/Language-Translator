@@ -53,12 +53,6 @@
               <% }); %>
             </ul>
           </div>
-
-
-          
-
-
-          
         </div>
         <div class="relative mb-4">
           <textarea   id="input-text" class="w-full p-4 bg-transparent border border-gray-300 dark:border-gray-600 rounded-lg resize-none outline-none text-lg placeholder-gray-400 dark:placeholder-gray-500" cols="30" rows="10" placeholder="Enter your text here"></textarea>
@@ -75,7 +69,7 @@
         </div>
       </div>
 
-      <div class="swap-container lg:absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="swap-container lg:absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ml-1">
         <div class="swap-position flex justify-center items-center w-12 h-12 rounded-full cursor-pointer border-4 border-gray-200 dark:border-gray-600 text-white bg-blue-500 hover:scale-110 transition-transform">
           <ion-icon name="swap-horizontal-outline" class="text-2xl"></ion-icon>
         </div>
@@ -89,7 +83,7 @@
               
               <button id="dropdownButton" type="button" class="inline-flex  w-full border-gray-300 shadow-sm px-4 py-2  text-sm font-medium  hover:bg-gray-500  rounded-full bg-gray-200 dark:bg-gray-600 text-white">
                 <ion-icon name="globe-outline" class="text-xl mr-2"></ion-icon>
-                 Options
+                 <h4 id="second-lang">Options</h4>
                 <!-- Heroicon name: solid/chevron-down -->
                 <ion-icon name="chevron-down-outline" class="text-xl ml-auto transform transition-transform "></ion-icon>
               </button>
@@ -121,6 +115,8 @@
     <script src="script/languages.js"></script>
     <script src="script/script.js"></script>
   </body>
+
+  
   <script>
     const inputTextElem = document.querySelector("#input-text");
     const inputChars = document.querySelector("#input-chars");
@@ -161,5 +157,10 @@
       dropdownMenu[1].classList.add('hidden');
     }
   });
+</script>
+
+<script>
+  const secondlang= document.querySelector('#second-lang')
+  console.log(secondlang.innerHTML)
 </script>
 </html>
